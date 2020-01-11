@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+
+  <div class="row">
+
+    <div class="card">
+
+      <div class="card-header">
+        <h1>Détails d'un acteur</h1>
+      </div>
+
+      <div class="card-body">
+
+          <div *ngIf="acteur">
+            <table class="table">
+              <tr>
+                <td>Nom :</td>
+                <td>{{acteur.nomAct}}</td>
+              </tr>
+              <tr><td>Prenom :</td>
+                <td>{{acteur.prenAct}}</td>
+              </tr>
+              <tr>
+                <td>Date de naissance :</td>
+                <td>{{acteur.dateNaiss}}</td>
+              </tr>
+              <tr>
+                <td>Date de déces :</td>
+                <td>{{acteur.dateDeces}}</td>
+              </tr>
+            </table>
+          </div>
+
+      </div>
+
+      <div class="card-footer">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" routerLink="/acteurs">
+          Retour
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

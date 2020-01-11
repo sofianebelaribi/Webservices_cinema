@@ -1,0 +1,95 @@
+<div class="container">
+  <div *ngIf="validate">
+    <div class="alert alert-success" role="alert">
+      <strong>Bravo !</strong>
+    </div>
+  </div>
+
+  <div *ngIf="failed">
+    <div class="alert alert-danger" role="alert">
+      <strong>Erreur !</strong>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div *ngIf="acteur">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="exampleModalLabel">Nouvel acteur</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="form-group">
+              <label for="nomAct">Nom</label>
+              <input [(ngModel)]="acteur.nomAct" type="text" class="form-control" id="nomAct" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prenAct">Prenom</label>
+              <input [(ngModel)]="acteur.prenAct" type="text" class="form-control" id="prenAct" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dateNaiss">Date de naissance</label>
+              <input [(ngModel)]="acteur.dateNaiss" type="date" class="form-control" id="dateNaiss" required>
+            </div>
+
+            <div class="form-group">
+              <label for="dateDeces">Date de déces</label>
+              <input [(ngModel)]="acteur.dateDeces" type="date" class="form-control" id="dateDeces">
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          <button (click)="add(acteur)" type="submit" class="btn btn-success" data-dismiss="modal">Enregistrer</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+
+  <h1>Acteurs</h1>
+
+  <div *ngIf="acteurs">
+    <table class="table table-hover">
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th class="right">Plus</th>
+      </tr>
+      <tr *ngFor="let acteur of acteurs">
+        <td>{{acteur.nomAct}}</td>
+        <td>{{acteur.prenAct}}</td>
+        <td class="right">
+          <button routerLink="/acteur/{{acteur.noAct}}" class="btn btn-info" title="Détails"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <button (click)="delete(acteur.noAct)" routerLink="/acteurs" type="button" class="btn btn-danger" title="Supprimer"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container-fluid btn-add">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Ajouter un acteur
+    </button>
+  </div>
+
+</div>

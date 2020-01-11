@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+
+  <div class="row">
+
+    <div class="card">
+
+      <div class="card-header">
+        <h1>Détails d'un réalisateur</h1>
+      </div>
+
+      <div class="card-body">
+
+        <div *ngIf="realisateur">
+          <table class="table">
+            <tr>
+              <td>Nom :</td>
+              <td>{{realisateur.nomRea}}</td>
+            </tr>
+            <tr><td>Prénom :</td>
+              <td>{{realisateur.prenRea}}</td>
+            </tr>
+            <tr>
+              <td>Films :</td>
+              <table>
+                <tr *ngFor="let film of realisateur.films"><td>{{film}}</td></tr>
+              </table>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="card-footer">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" routerLink="/realisateurs">
+          Retour
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

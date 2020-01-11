@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Movies">
+        <menu>
+            <item
+                android:id="@+id/nav_list"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="List movies" />
+            <item
+                android:id="@+id/nav_add"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Add a movie" />
+        </menu>
+    </item>
+    <item android:title="Search and Manage">
+        <menu>
+            <item
+                android:id="@+id/search"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="By title/director" />
+        </menu>
+    </item>
+
+</menu>

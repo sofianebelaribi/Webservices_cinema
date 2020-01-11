@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:text="Movie"
+        android:textSize="28sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/formTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie title"
+        />
+
+    <EditText
+        android:id="@+id/formLength"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie length"
+        />
+
+    <EditText
+        android:id="@+id/formReleaseDate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie release date (yyyy-mm-dd)"
+        />
+
+    <EditText
+        android:id="@+id/formBudget"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie budget"
+        />
+
+    <EditText
+        android:id="@+id/formBenefits"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie benefits"
+        />
+
+    <TextView
+        android:text="Category"
+        android:textSize="20sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Spinner
+        android:id="@+id/formCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <TextView
+        android:text="Director"
+        android:textSize="20sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Spinner
+        android:id="@+id/formDirector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <Button
+        android:text="Send"
+        android:id="@+id/sendButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="send"
+        />
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+
+  <div class="row">
+
+    <div class="card">
+
+      <div class="card-header">
+        <h1>Détails d'un film</h1>
+      </div>
+
+      <div class="card-body">
+
+        <div *ngIf="film">
+          <table class="table">
+            <tr>
+              <td>Titre :</td>
+              <td>{{this.film.titre}}</td>
+            </tr>
+            <tr>
+              <td>Durée :</td>
+              <td>{{this.film.duree}} min</td>
+            </tr>
+            <tr>
+              <td>Catégorie :</td>
+              <td>{{this.film.categorie.libelleCat}}</td>
+            </tr>
+            <tr>
+              <td>Date de sortie :</td>
+              <td>{{this.film.dateSortie}}</td>
+            </tr>
+            <tr>
+              <td>Budget :</td>
+              <td>{{this.film.budget}} $</td>
+            </tr>
+            <tr>
+              <td>Recette :</td>
+              <td>{{this.film.montantRecette}} $</td>
+            </tr>
+            <tr>
+              <td>Personnages :</td>
+              <td>
+                <table>
+                  <tr *ngFor="let personnage of film.personnages"><td>{{personnage.nomPers}}</td></tr>
+                </table>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+
+      <div class="card-footer">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" routerLink="/films">
+          Retour
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
